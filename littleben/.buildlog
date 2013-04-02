@@ -175,3 +175,66 @@ build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben
 Total time                                                   --   9 ms
 build.dart finished [274 ms]
 
+---
+build.dart --machine --changed=web\littleben.dart
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  12 ms
+build.dart finished [293 ms]
+
+---
+build.dart --machine --changed=web\littleben.dart
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  10 ms
+build.dart finished [279 ms]
+
+---
+build.dart --machine --changed=web\littleben.dart
+---
+build.dart --machine --changed=web\littleben.dart --changed=web\out\littleben.css --changed=web\out\littleben.d...
+---
+build.dart --machine --changed=web\out\littleben.dart --changed=web\out\littleben.html --changed=web\out\little...
+Total time                                                   --  10 ms
+build.dart finished [286 ms]
+
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart.map --changed=web\out\two...
+Total time                                                   --  10 ms
+build.dart finished [278 ms]
+
+---
+build.dart --machine --changed=web\littleben.dart
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  10 ms
+build.dart finished [283 ms]
+
+---
+build.dart --machine --changed=web\littleben.dart
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  10 ms
+build.dart finished [275 ms]
+
+---
+build.dart --machine --changed=web\littleben.dart
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  10 ms
+build.dart finished [283 ms]
+
+---
+build.dart --machine --changed=web\littleben.dart
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  10 ms
+build.dart finished [283 ms]
+
+---
+build.dart --machine --changed=web\littleben.dart
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  10 ms
+build.dart finished [290 ms]
+

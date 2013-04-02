@@ -1,3 +1,11 @@
+#############
+# Dart
+#############
+*/packages/*
+*/web/packages/*
+*/web/out/*
+*/.buildlog
+
 #################
 ## Eclipse
 #################
@@ -15,9 +23,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
-*/packages/*
-*/web/packages/*
-*/web/out/*
+
 
 # External tool builders
 .externalToolBuilders/
