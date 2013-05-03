@@ -238,3 +238,215 @@ build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben
 Total time                                                   --  10 ms
 build.dart finished [290 ms]
 
+---
+build.dart --machine --changed=pubspec.lock --changed=pubspec.yaml --changed=web\littleben.css --changed=web\li...
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  10 ms
+build.dart finished [284 ms]
+
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  10 ms
+build.dart finished [311 ms]
+
+---
+build.dart --machine --changed=web\out\twoway.html_bootstrap.dart.js --changed=web\out\twoway.html_bootstrap.da...
+Total time                                                   --  10 ms
+build.dart finished [273 ms]
+
+---
+build.dart --machine --clean
+Total time                                                   --  12 ms
+build.dart finished [277 ms]
+
+---
+build.dart --machine --full
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  10 ms
+build.dart finished [320 ms]
+
+---
+build.dart --machine --changed=web\out\twoway.html_bootstrap.dart.js --changed=web\out\twoway.html_bootstrap.da...
+Total time                                                   --   9 ms
+build.dart finished [276 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\littleben.css --changed=web\out\littleben.dart --changed=web\out\littleb...
+Total time                                                   --  11 ms
+build.dart finished [306 ms]
+
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [397 ms]
+
+---
+build.dart --machine --changed=web\out\index.html_bootstrap.dart.js --changed=web\out\index.html_bootstrap.dart...
+Total time                                                   --  10 ms
+build.dart finished [275 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  12 ms
+build.dart finished [290 ms]
+
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  10 ms
+build.dart finished [283 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [282 ms]
+
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  10 ms
+build.dart finished [280 ms]
+
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [365 ms]
+
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  10 ms
+build.dart finished [306 ms]
+
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [313 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [286 ms]
+
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [296 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [303 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  10 ms
+build.dart finished [303 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  12 ms
+build.dart finished [287 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [282 ms]
+
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [281 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  10 ms
+build.dart finished [280 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [281 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html.dart --changed=web\out\index.html_bootstrap.dart --changed=we...
+Total time                                                   --  10 ms
+build.dart finished [278 ms]
+
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart.map --changed=web\out\littl...
+Total time                                                   --  10 ms
+build.dart finished [275 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  10 ms
+build.dart finished [281 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [283 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [281 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  11 ms
+build.dart finished [287 ms]
+
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\index.html
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  10 ms
+build.dart finished [311 ms]
+
+---
+build.dart --machine --clean
+Total time                                                   --  15 ms
+build.dart finished [322 ms]
+
+---
+build.dart --machine --full
+---
+build.dart --machine --changed=web\out\index.html --changed=web\out\index.html.dart --changed=web\out\index.htm...
+Total time                                                   --  10 ms
+build.dart finished [292 ms]
+

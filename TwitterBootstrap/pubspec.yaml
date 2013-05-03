@@ -1,0 +1,8 @@
+name: sitcomTwitterBootstrap
+description: A sample WebUI application
+dependencies:
+  Bootstrap:
+    git: git://github.com/moctis/bootstrap.git
+  js: any
+  browser: any
+  web_ui: any

@@ -3,6 +3,6 @@ import 'package:web_ui/component_build.dart';
 
 // Ref: http://www.dartlang.org/articles/dart-web-components/tools.html
 main() {
-  build(new Options().arguments, ['web/littleben.html','web/xclickcounter.html'
-                                  ,'web/twoway.html']);
+  build(new Options().arguments, ['web/xclickcounter.html','web/littleben.html','web/xclickcounter.html'
+                                  ,'web/twoway.html','web/index.html']);
 }
