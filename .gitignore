@@ -1,9 +1,9 @@
 #############
 # Dart
 #############
-*/packages/*
-*/web/packages/*
-*/web/out/*
+/packages/*
+/web/packages/*
+/web/out/*
 .buildlog
 
 #################
