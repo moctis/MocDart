@@ -1,0 +1,7 @@
+name: MocDart2
+description: A sample Polymer application
+dependencies:
+    polymer: any
+transformers:
+- polymer:
+    entry_points: web/mocdart2.html
