@@ -3,6 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'dart:html';
+import 'dart:math' show Random;
 
 ButtonElement genButton;
 
@@ -15,7 +16,7 @@ void  main() {
 void updateBadge(Event e) {
   String inputName = (e.target as InputElement).value;
   
-  setBadgeName(inputName);
+  setBadgeName(new PirateName(firstName: inputName));
   if (inputName.trim().isEmpty) {
     genButton..disabled = false
              ..text = 'Aye! Gimme a name!';
@@ -26,9 +27,40 @@ void updateBadge(Event e) {
 }
 
 void generateBadge(Event e) {
-  setBadgeName('Anne Bonney');
+  setBadgeName(new PirateName());
 }
 
-void setBadgeName(String newName) {
-  querySelector('#badgeName').text = newName;
+void setBadgeName(PirateName newName) {
+  querySelector('#badgeName').text = newName.pirateName;
 }
+
+class PirateName {
+  static final Random indexGen = new Random();
+  String _firstName;
+  String _appellation;
+  
+  static final List names = [
+    'Anne', 'Mary', 'Jack', 'Morgan', 'Roger',
+    'Bill', 'Ragnar', 'Ed', 'Jane'];  
+  static final List appellations = [
+    'Black', 'Damned', 'Jackal', 'Red', 'Stalwart', 'Axe',
+    'Young', 'Old', 'Angry', 'Brave', 'Crazy', 'Noble']; 
+  
+  PirateName({String firstName, String appellation}) {
+    if (firstName == null) {
+      _firstName = names[indexGen.nextInt(names.length)];      
+    } else {
+      _firstName = firstName;
+    }
+    if (appellation == null) {
+      _appellation = appellations[indexGen.nextInt(appellations.length)];
+    } else {
+      _appellation = appellation;
+    }
+  }
+  
+  String get pirateName => _firstName.isEmpty 
+      ? '' : '$_firstName the $_appellation';
+}
+
+
