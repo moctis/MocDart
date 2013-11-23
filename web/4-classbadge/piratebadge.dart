@@ -4,13 +4,16 @@
 
 import 'dart:html';
 import 'dart:math' show Random;
+import 'dart:convert' show JSON;
 
 ButtonElement genButton;
+final String TREASURE_KEY = 'pirateName';
 
 void  main() {
   querySelector('#inputName').onInput.listen(updateBadge);
   genButton = querySelector('#generateButton');
   genButton.onClick.listen(generateBadge);
+  setBadgeName(getBadgeNameFromStorage());
 }
 
 void updateBadge(Event e) {
@@ -31,7 +34,20 @@ void generateBadge(Event e) {
 }
 
 void setBadgeName(PirateName newName) {
+  if (newName == null) {
+    return;  
+  }
   querySelector('#badgeName').text = newName.pirateName;
+  window.localStorage[TREASURE_KEY] = newName.jsonString;
+}
+
+PirateName getBadgeNameFromStorage() {
+  String jsonString = window.localStorage[TREASURE_KEY];
+  if (jsonString != null) {
+    return new PirateName.fromJSON(jsonString);
+  } else {
+    return null;
+  }
 }
 
 class PirateName {
@@ -53,6 +69,14 @@ class PirateName {
       _appellation = appellation;
     }
   }
+  
+  PirateName.fromJSON(String jsonString) {
+    Map storeName = JSON.decode(jsonString);
+    _firstName = storeName['f'];
+    _appellation = storeName['a'];
+  }
+  
+  String get jsonString => '{"f": "$_firstName", "a": "$_appellation"}';
 
   String toString() => pirateName;
 
