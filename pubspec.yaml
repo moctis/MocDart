@@ -1,5 +1,4 @@
-name: MocDart
-description: A sample Polymer application
-transformers:
-- polymer:
-    entry_points: web/index.html
+name: try_dart_samples
+description: A sample web application
+dependencies:
+  browser: any
