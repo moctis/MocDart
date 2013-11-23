@@ -1,11 +1,7 @@
 name: MocDart
 description: A sample Polymer application
 dependencies:
-  angular:
-    git:
-      url: https://github.com/angular/angular.dart.git
-  bootjack: any
-  polymer: any
+    polymer: any
 transformers:
 - polymer:
-    entry_points: web/index.html
+    entry_points: web/mocdart.html
