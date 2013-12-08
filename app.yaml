@@ -7,8 +7,14 @@ threadsafe: yes
 handlers:
 # Handler for the main page
 - url: /
-  static_files : web/index.html
-  upload: web/index.html
+  static_files : build/index.html
+  upload: build/index.html
+  
+- url: /css
+  static_dir: build/css
+  
+- url: /images
+  static_dir: build/images
 
 # Handler for rooms
 - url: /room
