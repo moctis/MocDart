@@ -15,7 +15,18 @@ handlers:
 
 - url: /(.*)
   static_files: web/\1
-  upload: static_files:/(.*)
+  upload: web/(.*)
+
+- url: /images/(.*\.(jpg)))
+  static_files: web/images/\1
+  upload: web/images/(.*\.(jpg))
+  
+- url: /css/(.*\.css)
+  mine_type: text/css
+  static_files: web/css/\1
+  upload: web/css/(.*\.css)
+  
+  
   
 libraries:
 - name: webapp2
