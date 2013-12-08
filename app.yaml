@@ -5,26 +5,49 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
-
+# Handler for the main page
 - url: /
-  static_files: web/index.html
+  static_files : web/index.html
   upload: web/index.html
 
-- url: /(.*)
-  static_files: web/\1
-  upload: web/(.*)
+# Handler for rooms
+- url: /room
+  static_files : web/room.html
+  upload: web/room.html
 
-- url: /images/(.*\.(jpg)))
-  static_files: web/images/\1
-  upload: web/images/(.*\.(jpg))
-  
-- url: /css/(.*\.css)
-  static_files: web/css/\1
-  upload: web/css/(.*\.css)
-  
+# Handler for the main script
+- url: /index.dart
+  mime_type: application/dart
+  static_files: web/index.dart
+  upload: web/index.dart
+
+# Handlers to get rid of .dart file mime type warnings when uploading
+- url: /style/(.*\.dart)
+  mime_type: application/dart
+  static_files: web/style/\1
+  upload: web/style/(.*\.dart)
+
+- url: /packages/(.*\.dart)
+  mime_type: application/dart
+  static_files: packages/\1
+  upload: packages/(.*\.dart)
+
+- url: /components/(.*\.dart)
+  mime_type: application/dart
+  static_files: web/components/\1
+  upload: web/components/(.*\.dart)
+
+# Handler for CSS files
+- url: /style
+  static_dir: web/style
+
+# Handler for dart packages
+- url: /packages
+  static_dir: packages
+
+# Handler for my custom components
+- url: /components
+  static_dir: web/components
   
   
 libraries:
