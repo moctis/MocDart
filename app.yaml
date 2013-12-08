@@ -9,10 +9,7 @@ handlers:
 - url: /
   static_files : build/index.html
   upload: build/index.html
-  
-- url: /css
-  static_dir: build/css
-  
+    
 - url: /images
   static_dir: build/images
 
@@ -42,10 +39,18 @@ handlers:
   mime_type: application/dart
   static_files: web/components/\1
   upload: web/components/(.*\.dart)
+  
+- url: /(.*\.js)
+  static_files: build/\1
+  upload: build/(.*\.js)
 
 # Handler for CSS files
 - url: /style
   static_dir: web/style
+
+- url: /css
+  static_dir: build/css
+
 
 # Handler for dart packages
 - url: /packages
