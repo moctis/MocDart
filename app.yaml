@@ -9,9 +9,14 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: .*
-  script: main.app
+- url: /
+  static_files: web/index.html
+  upload: web/index.html
 
+- url: /(.*)
+  static_files: web/\1
+  upload: static_files:/(.*)
+  
 libraries:
 - name: webapp2
   version: "2.5.2"
