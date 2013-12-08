@@ -22,7 +22,6 @@ handlers:
   upload: web/images/(.*\.(jpg))
   
 - url: /css/(.*\.css)
-  mine_type: text/css
   static_files: web/css/\1
   upload: web/css/(.*\.css)
   
