@@ -1,0 +1,4 @@
+<Contents of dailyNewsDigest.txt>
+Winning lotto numbers: [23, 63, 87, 26, 2]
+Tomorrow's forecast: 70F, sunny.
+Baseball score: Red Sox 10, Yankees 0
