@@ -1,6 +1,9 @@
 name: MocDart
 description: A sample Polymer application
 dependencies:
+  angular: any
+  angular_node_bind: any
+  angular_ui: any
   polymer: any
   polymer_ui_elements: any
 transformers:
