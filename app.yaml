@@ -9,12 +9,12 @@ default_expiration: 1s
 handlers:
 # Handler for the main page
 - url: /
-  static_files : index.html
+  static_files : build/web/index.html
   upload: build/web/index.html      
 
-- url: /(.*\.js)
+- url: /(.*\.(js|html|html_reference|map|dart))
   static_files: build/web/\1
-  upload: build/web/(.*\.js)
+  upload: build/web/(.*\.(js|html|html_reference|map|dart))
   
 - url: /packages
   static_dir: build/web/packages
