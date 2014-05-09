@@ -27,7 +27,7 @@ class MainApp extends PolymerElement {
 
     var domain = ServerChannel.generateRootDomain(window.location);
     ServerChannel.getVisitorInfo(domain).then((info) {
-      info.count++;
+      info.Count++;
       visitorInfo = info;
 
       // update the visitor info on the server side

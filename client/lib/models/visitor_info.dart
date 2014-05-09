@@ -2,15 +2,15 @@ part of models;
 
 // Visitor information
 class VisitorInfo {
-  VisitorInfo(this.count);
+  VisitorInfo(this.Count);
   VisitorInfo.fromJson(Map map) {
-    count = map[countTag];
+    Count = map[countTag];
   }
 
-  int count;
+  int Count;
 
   dynamic toJson() => {
-    countTag: count
+    countTag: Count
   };
 
   static const String countTag = "Count";

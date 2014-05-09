@@ -1,26 +1,31 @@
 application: mocdart
 version: 3
 runtime: go
-api_version: 1
+api_version: go1
 threadsafe: yes
 
 handlers:
 # Handler for the main page
 - url: /
-  static_files : client/web/index.html
-  upload: client/web/index.html
+  static_files : client/build/web/index.html
+  upload: client/build/web/index.html
   
 - url: /(.*\.js)
   mime_type: text/javascript
-  static_files: client/web/\1
-  upload: client/web/(.*\.js)
+  static_files: client/build/web/\1
+  upload: client/build/web/(.*\.js)
+  
+- url: /(.*\.map)
+  mime_type: application/octet-stream
+  static_files: client/build/web/\1
+  upload: client/build/web/(.*\.map)
   
 
 # Handlers to get rid of .dart file mime type warnings when uploading
 - url: /(.*\.dart)
   mime_type: application/dart
-  static_files: client/web/\1
-  upload: client/web/(.*\.dart)
+  static_files: client/build/web/\1
+  upload: client/web/build/(.*\.dart)
 
 - url: /packages/(.*\.dart)
   mime_type: application/dart
