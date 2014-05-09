@@ -1,10 +1,12 @@
-name: MocDart
+name: mocdart
 version: 0.0.1
 author: Moctis
 description: A sample angular application
 homepage: http://mocdart.appspot.com/
+
 dependencies:
-  angular: 0.10.0
-  shadow_dom: any
+  logging: any
+  polymer: any
 transformers:
-- angular
+- polymer:
+    entry_points: web/index.html
