@@ -12,8 +12,8 @@ handlers:
   static_files : index.html
   upload: build/web/index.html      
 
-- url: /
-  static_dir: build/web
+- url: /(.*)
+  static_files: /\1
   
 - url: /packages
   static_dir: build/web/packages
