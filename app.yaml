@@ -12,9 +12,9 @@ handlers:
   static_files : index.html
   upload: build/web/index.html      
 
-- url: /(.*)
+- url: /(.*\.(html|html_reference|js|map|dart))$
   static_files: /\1
-  upload: build/web/.*
+  upload: build/web/(.*\.(html|html_reference|js|map|dart))$
   
 - url: /packages
   static_dir: build/web/packages
