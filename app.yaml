@@ -13,7 +13,7 @@ handlers:
   upload: build/web/index.html      
 
 - url: /(.*\.(html|html_reference|js|map|dart))$
-  static_files: /\1
+  static_files: build/web/\1
   upload: build/web/.*\.(html|html_reference|js|map|dart)$
   
 - url: /packages
