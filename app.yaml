@@ -12,10 +12,12 @@ handlers:
   static_files : index.html
   upload: build/web/index.html      
 
-- url: /(.*\.(html|js|png|css|dart|json))
-  static_files: \1
-  upload: build/web/(.*\.(html|js|png|css|dart|json))
-  secure: never
+- url: /
+  static_dir: build/web
+  
+- url: /packages
+  static_dir: build/web/packages
+
   
 libraries:
 - name: webapp2
