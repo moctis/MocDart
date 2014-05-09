@@ -8,29 +8,25 @@ default_expiration: 1s
 
 handlers:
 # Handler for the main page
-- url: /
-  static_files : build/web/index.html
-  upload: build/web/index.html      
 
-- url: /(.*\.(js|html|html_reference|map))
-  static_files: build/web/\1
-  upload: build/web/(.*\.(js|html|html_reference|map))
-  
-- url: /(.*\.dart)
-  mime_type: application/dart
-  static_files: build/web/\1
-  upload: build/web/(.*\.dart)
-  
 - url: /packages/(.*\.dart)
   mime_type: application/dart
-  static_files: build/web/packages/\1
-  upload: build/web/packages/(.*\.dart)
-  
-  
+  static_files: build/client/packages/\1
+  upload: build/client/packages/(.*\.dart)
+    
 - url: /packages
-  static_dir: build/web/packages
+  static_dir: build/client/packages
 
+- url: /(.*\.dart)
+  mime_type: application/dart
+  static_files: build/client/\1
+  upload: build/client/(.*\.dart)
+
+- url: /(.*\.(js|html|html_reference|map))
+  static_files: build/client/\1
+  upload: build/client/(.*\.(js|html|html_reference|map))
   
-libraries:
-- name: webapp2
-  version: "2.5.2"
+- url: /
+  static_files : build/client/index.html
+  upload: build/client/index.html      
+  
