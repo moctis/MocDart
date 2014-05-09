@@ -1,11 +1,10 @@
 name: MocDart
-description: A sample Polymer application
+version: 0.0.1
+author: Moctis
+description: A sample angular application
+homepage: http://mocdart.appspot.com/
 dependencies:
-  angular: any
-  angular_node_bind: any
-  angular_ui: any
-  polymer: any
-  polymer_ui_elements: any
+  angular: 0.10.0
+  shadow_dom: any
 transformers:
-- polymer:
-    entry_points: web/index.html
+- angular

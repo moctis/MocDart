@@ -1,24 +1,6 @@
 import 'package:angular/angular.dart';
+import 'package:angular/application_factory.dart';
 
-@NgController(
-    selector:'[recipe-book]',
-    publishAs: 'ctrl'    
-    )
-class RecipeBookController {
-  String name = "Hello";
-  
-  RecipeBookController() { 
-  }
-}
-
-class MyAppModule extends Module {
-  MyAppModule() {
-    type(RecipeBookController);
-  }
-}
-
-main() {
-  ngBootstrap(
-    module: new MyAppModule()
-  );
+void main() {
+  applicationFactory().run();  
 }

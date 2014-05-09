@@ -7,8 +7,8 @@ threadsafe: yes
 handlers:
 # Handler for the main page
 - url: /
-  static_files : build/index.html
-  upload: build/index.html
+  static_files : web/index.html
+  upload: web/index.html
     
 - url: /images
   static_dir: build/images
