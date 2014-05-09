@@ -7,8 +7,6 @@ threadsafe: yes
 default_expiration: 1s
 
 handlers:
-# Handler for the main page
-handlers:
 - url: /(.*\.(appcache|manifest))
   mime_type: text/cache-manifest
   static_files: build/web/\1
