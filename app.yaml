@@ -8,25 +8,186 @@ default_expiration: 1s
 
 handlers:
 # Handler for the main page
-
-- url: /packages/(.*\.dart)
-  mime_type: application/dart
-  static_files: build/client/packages/\1
-  upload: build/client/packages/(.*\.dart)
-    
-- url: /packages
-  static_dir: build/client/packages
-
+handlers:
+- url: /(.*\.(appcache|manifest))
+  mime_type: text/cache-manifest
+  static_files: build/web/\1
+  upload: build/web/(.*\.(appcache|manifest))
+  expiration: "0m"
+ 
+- url: /(.*\.atom)
+  mime_type: application/atom+xml
+  static_files: build/web/\1
+  upload: build/web/(.*\.atom)
+  expiration: "1h"
+ 
+- url: /(.*\.crx)
+  mime_type: application/x-chrome-extension
+  static_files: build/web/\1
+  upload: build/web/(.*\.crx)
+ 
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: build/web/\1
+  upload: build/web/(.*\.css)
+ 
+- url: /(.*\.eot)
+  mime_type: application/vnd.ms-fontobject
+  static_files: build/web/\1
+  upload: build/web/(.*\.eot)
+ 
+- url: /(.*\.htc)
+  mime_type: text/x-component
+  static_files: build/web/\1
+  upload: build/web/(.*\.htc)
+ 
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: build/web/\1
+  upload: build/web/(.*\.html)
+  expiration: "1h"
+ 
+- url: /(.*\.ico)
+  mime_type: image/x-icon
+  static_files: build/web/\1
+  upload: build/web/(.*\.ico)
+  expiration: "7d"
+ 
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: build/web/\1
+  upload: build/web/(.*\.js)
+ 
 - url: /(.*\.dart)
   mime_type: application/dart
-  static_files: build/client/\1
-  upload: build/client/(.*\.dart)
-
-- url: /(.*\.(js|html|html_reference|map))
-  static_files: build/client/\1
-  upload: build/client/(.*\.(js|html|html_reference|map))
-  
+  static_files: build/web/\1
+  upload: build/web/(.*\.dart)
+     
+- url: /(.*\.(json|map))
+  mime_type: application/json
+  static_files: build/web/\1
+  upload: build/web/(.*\.(json|map))
+  expiration: "1h"
+ 
+- url: /(.*\.m4v)
+  mime_type: video/m4v
+  static_files: build/web/\1
+  upload: build/web/(.*\.m4v)
+ 
+- url: /(.*\.mp4)
+  mime_type: video/mp4
+  static_files: build/web/\1
+  upload: build/web/(.*\.mp4)
+ 
+- url: /(.*\.(ogg|oga))
+  mime_type: audio/ogg
+  static_files: build/web/\1
+  upload: build/web/(.*\.(ogg|oga))
+ 
+- url: /(.*\.ogv)
+  mime_type: video/ogg
+  static_files: build/web/\1
+  upload: build/web/(.*\.ogv)
+ 
+- url: /(.*\.otf)
+  mime_type: font/opentype
+  static_files: build/web/\1
+  upload: build/web/(.*\.otf)
+ 
+- url: /(.*\.rss)
+  mime_type: application/rss+xml
+  static_files: build/web/\1
+  upload: build/web/(.*\.rss)
+  expiration: "1h"
+ 
+- url: /(.*\.safariextz)
+  mime_type: application/octet-stream
+  static_files: build/web/\1
+  upload: build/web/(.*\.safariextz)
+ 
+- url: /(.*\.(svg|svgz))
+  mime_type: images/svg+xml
+  static_files: build/web/\1
+  upload: build/web/(.*\.(svg|svgz))
+ 
+- url: /(.*\.swf)
+  mime_type: application/x-shockwave-flash
+  static_files: build/web/\1
+  upload: build/web/(.*\.swf)
+ 
+- url: /(.*\.ttf)
+  mime_type: font/truetype
+  static_files: build/web/\1
+  upload: build/web/(.*\.ttf)
+ 
+- url: /(.*\.(txt|html_reference))
+  mime_type: text/plain
+  static_files: build/web/\1
+  upload: build/web/(.*\.(txt|html_reference))
+ 
+- url: /(.*\.unity3d)
+  mime_type: application/vnd.unity
+  static_files: build/web/\1
+  upload: build/web/(.*\.unity3d)
+ 
+- url: /(.*\.webm)
+  mime_type: video/webm
+  static_files: build/web/\1
+  upload: build/web/(.*\.webm)
+ 
+- url: /(.*\.webp)
+  mime_type: image/webp
+  static_files: build/web/\1
+  upload: build/web/(.*\.webp)
+ 
+- url: /(.*\.woff)
+  mime_type: application/x-font-woff
+  static_files: build/web/\1
+  upload: build/web/(.*\.woff)
+ 
+- url: /(.*\.xml)
+  mime_type: application/xml
+  static_files: build/web/\1
+  upload: build/web/(.*\.xml)
+  expiration: "1h"
+ 
+- url: /(.*\.xpi)
+  mime_type: application/x-xpinstall
+  static_files: build/web/\1
+  upload: build/web/(.*\.xpi)
+ 
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: build/web/\1
+  upload: build/web/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+ 
+# audio files
+- url: /(.*\.(mid|midi|mp3|wav))
+  static_files: build/web/\1
+  upload: build/web/(.*\.(mid|midi|mp3|wav))  
+ 
+# windows files
+- url: /(.*\.(doc|exe|ppt|rtf|xls))
+  static_files: build/web/\1
+  upload: build/web/(.*\.(doc|exe|ppt|rtf|xls))
+ 
+# compressed files
+- url: /(.*\.(bz2|gz|rar|tar|tgz|zip))
+  static_files: build/web/\1
+  upload: build/web/(.*\.(bz2|gz|rar|tar|tgz|zip))
+ 
+# index files
+- url: /(.*)/
+  static_files: build/web/\1/index.html
+  upload: build/web/(.*)/index.html
+  expiration: "15m"
+ 
+# site root
 - url: /
-  static_files : build/client/index.html
-  upload: build/client/index.html      
+  static_files: build/web/index.html
+  upload: build/web/index.html
+  expiration: "15m"
   
+  
+
+ 
