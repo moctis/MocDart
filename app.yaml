@@ -12,9 +12,20 @@ handlers:
   static_files : build/web/index.html
   upload: build/web/index.html      
 
-- url: /(.*\.(js|html|html_reference|map|dart))
+- url: /(.*\.(js|html|html_reference|map))
   static_files: build/web/\1
-  upload: build/web/(.*\.(js|html|html_reference|map|dart))
+  upload: build/web/(.*\.(js|html|html_reference|map))
+  
+- url: /(.*\.dart)
+  mime_type: application/dart
+  static_files: build/web/\1
+  upload: build/web/(.*\.dart)
+  
+- url: /packages/(.*\.dart)
+  mime_type: application/dart
+  static_files: build/web/packages/\1
+  upload: build/web/packages/(.*\.dart)
+  
   
 - url: /packages
   static_dir: build/web/packages
