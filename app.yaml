@@ -14,7 +14,7 @@ handlers:
 
 - url: /(.*\.(html|html_reference|js|map|dart))$
   static_files: /\1
-  upload: build/web/(.*\.(html|html_reference|js|map|dart))$
+  upload: build/web/.*\.(html|html_reference|js|map|dart)$
   
 - url: /packages
   static_dir: build/web/packages
