@@ -15,7 +15,7 @@ class MainApp extends PolymerElement {
       print(log);
     });
 
-    visitorInfo = new VisitorInfo(0);
+    visitorInfo = new VisitorInfo(10);
   }
 
   @observable

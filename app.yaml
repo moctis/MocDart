@@ -1,6 +1,6 @@
 application: mocdart
 version: 3
-runtime: python27
+runtime: go
 api_version: 1
 threadsafe: yes
 
@@ -9,8 +9,19 @@ handlers:
 - url: /
   static_files : client/web/index.html
   upload: client/web/index.html
+  
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: client/web/\1
+  upload: client/web/(.*\.js)
+  
 
 # Handlers to get rid of .dart file mime type warnings when uploading
+- url: /(.*\.dart)
+  mime_type: application/dart
+  static_files: client/web/\1
+  upload: client/web/(.*\.dart)
+
 - url: /packages/(.*\.dart)
   mime_type: application/dart
   static_files: client/packages/\1
