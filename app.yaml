@@ -7,61 +7,46 @@ threadsafe: yes
 handlers:
 # Handler for the main page
 - url: /
-  static_files : client/build/web/index.html
-  upload: client/build/web/index.html
+  static_files : build/web/index.html
+  upload: build/web/index.html
   
 - url: /(.*\.js)
   mime_type: text/javascript
-  static_files: client/build/web/\1
-  upload: client/build/web/(.*\.js)
+  static_files: build/web/\1
+  upload: build/web/(.*\.js)
   
 - url: /(.*\.map)
   mime_type: application/octet-stream
-  static_files: client/build/web/\1
-  upload: client/build/web/(.*\.map)
+  static_files: build/web/\1
+  upload: build/web/(.*\.map)
   
 
 # Handlers to get rid of .dart file mime type warnings when uploading
 - url: /(.*\.dart)
   mime_type: application/dart
-  static_files: client/build/web/\1
-  upload: client/web/build/(.*\.dart)
+  static_files: build/web/\1
+  upload: build/web/(.*\.dart)
 
 - url: /packages/(.*\.dart)
   mime_type: application/dart
-  static_files: client/packages/\1
-  upload: client/packages/(.*\.dart)
-
-- url: /components/(.*\.dart)
-  mime_type: application/dart
-  static_files: client/lib/components/\1
-  upload: client/lib/components/(.*\.dart)
-
-- url: /models/(.*\.dart)
-  mime_type: application/dart
-  static_files: client/lib/models/\1
-  upload: client/lib/models/(.*\.dart)
-
-- url: /services/(.*\.dart)
-  mime_type: application/dart
-  static_files: client/lib/services/\1
-  upload: client/lib/services/(.*\.dart)
+  static_files: web/packages/\1
+  upload: build/web/packages/(.*\.dart)
 
 # Handler for dart packages
 - url: /packages
-  static_dir: client/packages
+  static_dir: build/web/packages
 
 # Handler for libraries
-- url: /components
-  static_dir: client/lib/components
+#- url: /components
+  #static_dir: client/lib/components
 
-- url: /services
-  static_dir: client/lib/services
+#- url: /services
+ # static_dir: client/lib/services
 
-- url: /models
-  static_dir: client/lib/models
+#- url: /models
+  #static_dir: client/lib/models
 
 # All other requests are handled by the Go code
-- url: /.*
-  script: _go_app
-
+- url: /
+  static_files: build/web/index.html
+  upload: build/web/index.html

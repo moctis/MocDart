@@ -1,0 +1,11 @@
+name: mocdart
+version: 0.0.1
+author: Moctis
+description: A sample application
+homepage: http://mocdart.appspot.com/
+dependencies:
+  angular: any
+  browser: any
+
+transformers:
+- angular
