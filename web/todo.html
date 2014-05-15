@@ -2,13 +2,24 @@
 
 <html>
 <head>
-  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="packages/angular/css/angular.css" />
+  <link rel="stylesheet" href="packages/bootjack/css/bootstrap.css">
   <link rel="stylesheet" href="css/todo.css" />
-  <title>Thinkgs To Do</title>
-  <script src="todo.dart" type="application/dart"></script>
-  <script src="package/browser/dart.js"></script>
+  <title>Thinkgs To Do</title> 
 </head>
 <body ng-app>
-  <h2>Things To Do ;-)</h2>
-<body>
+  <div ng-hide="true" class="border well loading">
+    Wait, Dart is loading this awsone app...
+  </div>
+  <div ng-cloak>
+    <h2>Things To Do ;-)</h2>
+    <button class="btn btn-default">
+    test
+    </button>
+  </div>
+    
+  <script type="application/dart" src="todo.dart"></script>
+  <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+  <script src="packages/browser/dart.js"></script>
+</body>
 </html>

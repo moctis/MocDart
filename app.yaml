@@ -40,6 +40,9 @@ handlers:
 - url: /packages
   static_dir: build/web/packages
 
+- url: /css
+  static_dir: build/web/css 
+
 # Handler for libraries
 #- url: /components
   #static_dir: client/lib/components
