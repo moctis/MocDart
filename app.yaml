@@ -2,8 +2,7 @@ application: mocdart
 version: 3
 runtime: python27
 api_version: 1
-threadsafe: yes
-dart2js: true
+threadsafe: yes 
 
 handlers:
 # Handler for the main page
