@@ -2,7 +2,8 @@ application: mocdart
 version: 3
 runtime: python27
 api_version: 1
-threadsafe: yes 
+threadsafe: yes
+dart2js: true
 
 handlers:
 # Handler for the main page
@@ -54,10 +55,6 @@ handlers:
   #static_dir: client/lib/models
 
 # All other requests are handled by the Go code
-#- url: /
-#  static_files: build/web/index.html
-#  upload: build/web/index.html
-
 - url: /
-  match: postregex
-  static_dir: build/web
+  static_files: build/web/index.html
+  upload: build/web/index.html
