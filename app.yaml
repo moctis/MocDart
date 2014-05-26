@@ -3,58 +3,39 @@ version: 3
 runtime: python27
 api_version: 1
 threadsafe: yes
-dart2js: true
 
 handlers:
-# Handler for the main page
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+  secure: never
+
 - url: /
-  static_files : build/web/index.html
+  static_files: index.html
   upload: build/web/index.html
-  
-- url: /(.*\.html)
-  static_files: build/web/\1
-  upload: build/web/(.*\.html)
-    
-- url: /(.*\.js)
-  mime_type: text/javascript
-  static_files: build/web/\1
-  upload: build/web/(.*\.js)
-  
-- url: /(.*\.map)
-  mime_type: application/octet-stream
-  static_files: build/web/\1
-  upload: build/web/(.*\.map)
-  
+  secure: never
 
-# Handlers to get rid of .dart file mime type warnings when uploading
-- url: /(.*\.dart)
-  mime_type: application/dart
-  static_files: build/web/\1
-  upload: build/web/(.*\.dart)
+#- url: /nossl.appcache
+#  static_files: nossl.appcache
+#  upload: nossl.appcache
+#  secure: never
 
-- url: /packages/(.*\.dart)
-  mime_type: application/dart
-  static_files: web/packages/\1
-  upload: build/web/packages/(.*\.dart)
+- url: /(.*\.(html|js|png|css|dart|json))
+  static_files: \1
+  upload: build/web/(.*\.(html|js|png|css|dart|json))
+  secure: never
 
-# Handler for dart packages
-- url: /packages
-  static_dir: build/web/packages
+#- url: /css/fonts/fontawesome-webfont.woff
+#  static_files: fontawesome-webfont.woff
+#  upload: fontawesome-webfont.woff
+#  secure: never
 
-- url: /css
-  static_dir: build/web/css 
+- url: .*
+  static_files: not_found.html
+  upload: not_found.html
+  secure: never
 
-# Handler for libraries
-#- url: /components
-  #static_dir: client/lib/components
-
-#- url: /services
- # static_dir: client/lib/services
-
-#- url: /models
-  #static_dir: client/lib/models
-
-# All other requests are handled by the Go code
-- url: /
-  static_files: build/web/index.html
-  upload: build/web/index.html
+libraries:
+- name: webapp2
+  version: "2.5.2"
