@@ -12,7 +12,7 @@ handlers:
   secure: never
 
 - url: /
-  static_files: index.html
+  static_files: build/web/index.html
   upload: build/web/index.html
   secure: never
 
@@ -21,9 +21,9 @@ handlers:
 #  upload: nossl.appcache
 #  secure: never
 
-- url: /(.*\.(html|js|png|css|dart|json))
-  static_files: \1
-  upload: build/web/(.*\.(html|js|png|css|dart|json))
+- url: /(.*\.(html|js|png|css|dart|json|html_reference))
+  static_files: build/web/\1
+  upload: build/web/(.*\.(html|js|png|css|dart|json|html_reference))
   secure: never
 
 #- url: /css/fonts/fontawesome-webfont.woff
