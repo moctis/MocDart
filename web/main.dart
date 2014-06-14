@@ -1,20 +1,18 @@
-library backendAppModule; 
+library moctisModule; 
  
 // Temporary, please follow https://github.com/angular/angular.dart/issues/476
-@MirrorsUsed(
-//targets: const ['backendAppModule'], symbols: 'status', 
-override: '*')
+@MirrorsUsed(override: '*')
 import 'dart:mirrors';
 import 'package:angular/application_factory.dart';
 import 'package:logging/logging.dart';
-import 'lib/backendAppModule.dart';
+import 'lib/MoctisModule.dart';
 
 void main() {  
   Logger.root.level = Level.FINEST;
   Logger.root.onRecord.listen((LogRecord r) { print(r.message); });
   
   applicationFactory()
-    .addModule(new BackendAppModule())
+    .addModule(new MoctisModule())
     .run();
 }
  

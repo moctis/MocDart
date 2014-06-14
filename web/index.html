@@ -6,17 +6,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link src="css/style.less" rel='stylesheet' type='text/css'/>
-    <title>ERP</title>
+    <title>Moctis Dart</title>
   </head>
  
-  <body>   
-    <nav> 
-      <a href="#/home">Home</a>
-      <a href="#/new">New Entry</a>
-    </nav> 
+  <body>     
     <ng-view></ng-view> 
-    <script type="application/dart" src="backend.dart"></script>
-    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script type="application/dart" src="main.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>
 </html>
