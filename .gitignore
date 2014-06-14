@@ -12,3 +12,4 @@ pubspec.lock
 *.js.deps
 *.js.map
 *.dart.js
+bower_components

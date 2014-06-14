@@ -20,12 +20,22 @@ handlers:
 #  static_files: nossl.appcache
 #  upload: nossl.appcache
 #  secure: never
-
-- url: /(.*\.(html|js|png|css|dart|json|html_reference))
+- url: /(.*\.(dart))
+  mime_type: application/dart
   static_files: build/web/\1
-  upload: build/web/(.*\.(html|js|png|css|dart|json|html_reference))
+  upload: build/web/(.*\.(dart))
   secure: never
-
+  
+- url: /(.*\.(json))
+  mime_type: application/json
+  static_files: build/web/\1
+  upload: build/web/(.*\.(json))
+  secure: never   
+  
+- url: /(.*\.(html|js|png|css|html_reference))
+  static_files: build/web/\1
+  upload: build/web/(.*\.(html|js|png|css|html_reference))
+  secure: never  
 #- url: /css/fonts/fontawesome-webfont.woff
 #  static_files: fontawesome-webfont.woff
 #  upload: fontawesome-webfont.woff

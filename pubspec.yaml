@@ -6,6 +6,4 @@ homepage: http://mocdart.appspot.com/
 dependencies:
   angular: any
   bootjack: any
-  browser: any
-transformers:
-- angular
+  browser: any   
