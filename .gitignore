@@ -13,3 +13,4 @@ pubspec.lock
 *.js.map
 *.dart.js
 bower_components
+node_modules
