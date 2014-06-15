@@ -7,8 +7,9 @@ part 'controllers/MoctisController.dart';
 
 class MoctisModule extends Module {
   MoctisModule() {
-    bind(MoctisController); 
+    bind(MoctisController);
     bind(RouteInitializerFn, toValue: RouteInitializer);
-    bind(NgRoutingUsePushState, toFactory: (_) => new NgRoutingUsePushState.value(false));    
+    bind(NgRoutingUsePushState, toFactory: (_) =>
+        new NgRoutingUsePushState.value(false));
   }
 }
