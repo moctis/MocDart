@@ -4,6 +4,13 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
       // Task configuration
+    copy: {
+      fonts: {
+        files: [
+          {expand:true, cwd:'./bower_components/bootstrap/fonts/', src:['*'], dest:'./web/assets/fonts/', filter:'isFile' }
+        ]
+      }
+    },
     less: {
         development: {
             options: {
@@ -32,7 +39,6 @@ module.exports = function(grunt) {
           './bower_components/bootstrap/js/modal.js',
           './bower_components/bootstrap/js/tab.js',
           './bower_components/bootstrap/js/transition.js',
-
 
           './app/assets/javascript/frontend.js'
         ],
@@ -106,6 +112,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Task definition
   grunt.registerTask('default', ['watch']);
