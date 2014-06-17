@@ -6,6 +6,3 @@ homepage: http://mocdart.appspot.com/
 dependencies:
   angular: any
   browser: any
-transformers:
-- less_node:
-    entry_point: web/builder.less
