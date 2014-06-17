@@ -5,7 +5,7 @@ description: A sample application
 homepage: http://mocdart.appspot.com/
 dependencies:
   angular: any
-  bootjack: any
   browser: any
 transformers:
-- angular
+- less_node:
+    entry_point: web/builder.less

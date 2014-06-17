@@ -1,0 +1,20 @@
+{
+  "name": "mocdart",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "less": "~1.7.1"
+  },
+  "devDependencies": {},
+  "install": {
+    "path": {
+      "js": "web/bower/js/",
+      "css": "web/bower/css/",
+      "eot": "web/bower/font/",
+      "svg": "web/bower/font/",
+      "ttf": "web/bower/font/",
+      "woff": "web/bower/font/"
+    }
+  }
+}

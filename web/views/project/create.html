@@ -1,0 +1,42 @@
+<div class="panel panel-primary" ProjectController>
+  <div class="panel-heading">
+    <h3 class="panel-title">Create Project</h3>
+  </div>
+  <div class="panel-body page-panel-body">
+    <div class="form-horizontal">
+      <div class="form-group SimpleTextQuestion">
+        <div class="col-sm-4 col-xs-4 control-label">
+          <span class="">Name</span><span class="text-danger bold"
+            aria-hidden="false">*</span>
+        </div>
+        <div class="col-sm-8 col-xs-8">
+          <input type="text" class="form-control" ng-model="scope.project.name">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4 col-xs-4 control-label">
+          <span class="">Description</span><span
+            class="text-danger bold" aria-hidden="true"
+            style="display: none;">*</span>
+        </div>
+        <div class="col-sm-8 col-xs-8">
+          <textarea class="form-control" rows="3"
+            style="resize: vertical; min-height: 50px;"  ng-model="scope.project.description"></textarea>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="panel-footer page-panel-footer affix-bottom">
+      <div class="navbar-btn clearfix">
+        <div class="pull-left btn-toolbar">
+          <button type="button" class="btn btn-lg btn-danger" title="Delete" ng-click="scope.delete()">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </div>
+        <div class="pull-right btn-toolbar">
+          <button type="button" class="btn btn-default" ng-click="scope.cancel()">Cancel</button>
+          <button type="button" class="btn btn-primary" ng-click="scope.save()">Save</button>
+        </div>
+      </div>
+    </div>
+</div>
