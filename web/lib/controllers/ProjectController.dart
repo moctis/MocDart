@@ -1,13 +1,31 @@
 part of MoctisModule;
 
-@Controller(selector: '[Project]', publishAs: 'scope')
+
+
+@Controller(selector: '[ProjectController]', publishAs: 'scope')
 class ProjectController {
   final Scope _scope;
   final Router _router;
 
-  MoctisController(this._router, this._scope) {  }
+  ProjectEntry project;
+  List<ProjectEntry> results;
 
-  submit() {
-    _router.gotoUrl('/home');
+  ProjectController(this._router, this._scope) {
+    project = new ProjectEntry("test" , "xxxxxxxxxx");
+    results = ProjectEntry.gets();
+  }
+
+  save() {
+    ProjectEntry.save(project);
+    cancel();
+  }
+
+  delete() {
+    ProjectEntry.delete(project);
+    cancel();
+  }
+
+  cancel() {
+    _router.gotoUrl('/project/list');
   }
 }

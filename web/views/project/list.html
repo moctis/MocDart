@@ -1,0 +1,28 @@
+
+<div class="panel panel-primary" ProjectController>
+  <div class="panel-heading">
+    <h3 class="panel-title">Project List</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-6 col-lg-4"
+        ng-repeat="it in scope.results">
+        <div class="panel panel-default">
+          <div class="panel-body page-panel-body">
+            <h4 class="no-margin-top GB0TDK2GCB">
+              <span class="glyphicon glyphicon-book" title="Invoice"></span>
+              <a class="ellipsis-block" title="Invoice CIN-001"
+                href="#/project/create">{{it.name}}</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<script>$.bootstrapPlugin();</script>
+
